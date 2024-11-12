@@ -5,7 +5,7 @@ import { Country } from './entities/country.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
-  imports: [],
+  imports: [TypeOrmModule.forFeature([Country])],
   controllers: [CountriesController],
   providers: [CountriesService],
 })

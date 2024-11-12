@@ -22,10 +22,12 @@ const CONNECTION_TYPE = 'mysql';
       password: process.env.DB_PASSWORD,
       database: process.env.DB_NAME,
       entities: [Country],
-      synchronize: true, //sets to false on production
+      synchronize: true, // Use migrations instead
       autoLoadEntities: true,
       logging: ['info', 'error', 'migration'],
       timezone: 'Z',
+      migrations: ['dist/migrations/*.js'],
+      migrationsRun: true,
     }),
     CountriesModule,
   ],

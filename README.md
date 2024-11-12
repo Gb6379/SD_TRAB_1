@@ -43,6 +43,9 @@ $ npm run start:dev
 
 # production mode
 $ npm run start:prod
+
+# MIGRRATION create
+$ npx typeorm migration:create ./src/migrations/createCountry
 ```
 
 ## Test
